@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,tr,td{
+            border-style: solid;
+        }
+    </style>
+    <script>
+        function adddata(){
+            var n = document.getElementById("name");
+            var a = document.getElementById("address");
+            var p = document.getElementById("phone");
+            var table = document.getElementById("tab");
+            
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+
+            td1.innerHTML = n.value;
+            td2.innerHTML = a.value;
+            td3.innerHTML = p.value;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+
+            table.appendChild(tr);
+        }
+    </script>
+</head>
+    <from>
+        ชือลูกค้า :<input type="text" id="name"><br>
+        ที่อยู่ลูกค้า :<input type="text" id="address"><br>
+        โทรศัพท์ :<input type="text" id="phone"><br>
+        <input type="button" value="เพิ่ม" onclick="adddata()"><br>
+    </from>
+        <table id="tab">
+                <th>ชื่อลูกค้า</th>
+                <th>ที่อยู่ลูกค้า</th>
+                <th>โทรศัทท์</th>
+        </table>
+</body>
+</html>
